@@ -1,0 +1,26 @@
+.header__logo {
+  height: 100%;
+  width: calc(100vw*0.04 + 91.33px);
+  max-width: 142px;
+  min-height: 25px;
+  margin-left: 27px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../images/logo.svg");
+  background-position: center;
+  z-index: 1;
+}
+
+@media (min-width: 320px) {
+  .header__logo {
+    min-height: calc(100vw*0.008 + 22.33px);
+    margin-left: calc(-100vw*0.03 + 36px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__logo {
+    min-height: 33px;
+    margin-left: 0px;
+  }
+}

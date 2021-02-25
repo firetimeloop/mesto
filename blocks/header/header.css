@@ -1,0 +1,22 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 880px;
+  min-height: 56px;
+  margin-top: 28px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+@media (min-width: 320px) {
+  .header {
+    min-height: calc(100vw*0.019 + 50px);
+    margin-top: calc(100vw*0.018 + 22.33px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    min-height: 74px;
+    margin-top: 45px;
+  }
+}
