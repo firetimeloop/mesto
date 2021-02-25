@@ -1,0 +1,11 @@
+.profile__description {
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 830px) {
+  .profile__description {
+    text-align: left;
+    margin-left: 30px;
+  }
+}
