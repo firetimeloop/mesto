@@ -25,3 +25,6 @@
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__like-icon/element__like-icon.css);
 @import url(../blocks/element/__name/element__name.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
