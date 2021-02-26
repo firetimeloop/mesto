@@ -1,0 +1,8 @@
+.element {
+  box-sizing: border-box;
+  width: 282px;
+  height: 362px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}

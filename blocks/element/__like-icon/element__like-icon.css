@@ -1,0 +1,9 @@
+.element__like-icon {
+  margin-left: 5px;
+  min-height: 19px;
+  width: 22px;
+  background-image: url("../../../images/hearth-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
