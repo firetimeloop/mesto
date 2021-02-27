@@ -1,5 +1,6 @@
 .popup__submit-button {
   margin-top: 46px;
+  margin-bottom: 25px;
   min-height: 46px;
   background-image: url("../../../images/submit-button.svg");
   background-size: cover;
@@ -15,12 +16,14 @@
 @media (min-width: 320px) {
   .popup__submit-button {
     min-height: calc(100vw*0.004 + 44.67px);
+    margin-bottom: calc(100vw*0.013 + 21px);
   }
 }
 
 @media (min-width: 1280px) {
   .popup__submit-button {
     min-height: 50px;
+    margin-bottom: 37px;
   }
 }
 

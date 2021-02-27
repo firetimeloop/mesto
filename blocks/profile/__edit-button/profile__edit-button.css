@@ -6,31 +6,28 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  top: 32px;
-  right: -28px;
   background-color: transparent;
   border: 0;
+  align-self: start;
   cursor: pointer;
+  margin-left: 10px;
+  margin-top: 8px;
 }
 
 @media (min-width: 320px) {
   .profile__edit-button {
     min-height: calc(100vw*0.006 + 16px);
     width: calc(100vw*0.006 + 16px);
-  }
-}
-
-@media (min-width: 830px) {
-  .profile__edit-button {
-    top: 15px;
-    right: -36px;
+    margin-left: calc(100vw*0.008 + 7.33px);
+    margin-top: calc(100vw*0.007 + 5.67px);
   }
 }
 
 @media (min-width: 1280px) {
   .profile__edit-button {
     min-height: 24px;
+    margin-left: 18px;
+    margin-top: 15px;
   }
 }
 

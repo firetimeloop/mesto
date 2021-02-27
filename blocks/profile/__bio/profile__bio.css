@@ -4,12 +4,17 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
+  max-width: 282px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (min-width: 320px) {
   .profile__bio {
     font-size: calc(100vw*0.004 + 12.67px);
     line-height: calc(100vw*0.005 + 15.33px);
+    max-width: calc(100vw*0.123 + 242.7px);
   }
 }
 
@@ -17,5 +22,6 @@
   .profile__bio {
     font-size: 18px;
     line-height: 22px;
+    max-width: 400px;
   }
 }

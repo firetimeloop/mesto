@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 830px) {
+@media (min-width: 970px) {
   .profile__add-button {
     margin-top: 0;
     background-image: url("../../../images/add-button-small.svg");

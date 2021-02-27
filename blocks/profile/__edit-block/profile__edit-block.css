@@ -1,0 +1,11 @@
+.profile__edit-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: 22px;
+  max-width: 100%;
+}
+@media (min-width: 830px) {
+  .profile__edit-block {
+    margin-top: 0;
+  }
+}
