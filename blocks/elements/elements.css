@@ -10,6 +10,13 @@
   padding: 0;
   list-style-type: none;
   justify-content: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 320px) {
+  .elements {
+    margin-top: calc(100vw*0.016 + 15px);
+  }
 }
 
 @media (min-width: 830px) {
@@ -23,5 +30,6 @@
   .elements {
     grid-template-columns: repeat(3, 282px);
     grid-template-rows: repeat(2, 361px);
+    margin-top: 35px;
   }
 }
