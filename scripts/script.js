@@ -4,8 +4,8 @@ let profileBio = document.querySelector(".profile__bio");
 // Находим форму в DOM
 let formElement = document.querySelector(".popup__form");
 // Находим поля формы в DOM
-let nameInput = formElement.querySelectorAll(".popup__input-text-box")[0];
-let jobInput = formElement.querySelectorAll(".popup__input-text-box")[1];
+let nameInput = formElement.querySelector(".popup__form_input-name");
+let jobInput = formElement.querySelector(".popup__form_input-bio");
 
 nameInput.value = profileName.textContent;
 jobInput.value = profileBio.textContent;
