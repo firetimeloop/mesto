@@ -1,0 +1,26 @@
+.popup__submit-button {
+  margin-top: 46px;
+  min-height: 46px;
+  background-image: url("../../../images/submit-button.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2px;
+}
+
+@media (min-width: 320px) {
+  .popup__submit-button {
+    min-height: calc(100vw*0.004 + 44.67px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .popup__submit-button {
+    min-height: 50px;
+  }
+}
+
+.popup__submit-button:hover {
+  opacity: .6;
+  transition: opacity 0.5s linear 0s;
+}

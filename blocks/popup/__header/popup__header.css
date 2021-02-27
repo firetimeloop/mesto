@@ -1,0 +1,25 @@
+.popup__header {
+  margin: 0;
+  margin-top: 25px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  width: 84%;
+  text-align: left;
+}
+
+@media (min-width: 320px) {
+  .popup__header {
+    margin-top: calc(100vw*0.009 + 22px);
+    font-size: calc(100vw*0.006 + 16px);
+    line-height: calc(100vw*0.007 + 19.67px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .popup__header {
+    margin-top: 34px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
