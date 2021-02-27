@@ -8,21 +8,9 @@
   color: #000;
   display: none;
   justify-content: center;
-  padding-top: 123px;
   background-color: rgba(0,0,0,0.5);
   font-family: 'Inter', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (min-width: 320px) {
-  .popup {
-    padding-top: calc(100vw*0.075 + 99px);
-  }
-}
-
-@media (min-width: 1280px) {
-  .popup {
-    padding-top: 195px;
-  }
+  align-items: center;
 }

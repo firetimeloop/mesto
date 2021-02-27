@@ -12,6 +12,7 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: opacity 0.5s linear 0s;
 }
 
 @media (min-width: 320px) {
@@ -36,5 +37,4 @@
 
 .popup__close-button:hover {
   opacity: .6;
-  transition: opacity 0.5s linear 0s;
 }

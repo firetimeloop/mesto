@@ -11,6 +11,7 @@
   list-style-type: none;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 320px) {

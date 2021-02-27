@@ -11,6 +11,7 @@
   background-color: black;
   border: 0;
   cursor: pointer;
+  transition: opacity 0.5s linear 0s;
 }
 
 @media (min-width: 320px) {
@@ -28,6 +29,5 @@
 }
 
 .popup__submit-button:hover {
-  opacity: .6;
-  transition: opacity 0.5s linear 0s;
+  opacity: .8;
 }

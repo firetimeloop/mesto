@@ -2,17 +2,20 @@
   max-width: 880px;
   width: 282px;
   margin-top: 48px;
+  margin-bottom: 36px;
 }
 
 @media (min-width: 320px) {
   .footer {
     width: calc(100vw*0.623 + 82.67px);
-    margin-top: calc(100vw*0.05 + 32px);
+    margin-top: calc(100vw*0.02 + 41.67px);
+    margin-bottom: calc(100vw*0.025 + 28px);
   }
 }
 
 @media (min-width: 1280px) {
   .footer {
-    margin-top: 96px;
+    margin-top: 67px;
+    margin-bottom: 60px;
   }
 }

@@ -10,6 +10,7 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: opacity 0.5s linear 0s;
 }
 
 @media (min-width: 970px) {
@@ -23,5 +24,4 @@
 
 .profile__add-button:hover {
   opacity: .6;
-  transition: opacity 0.5s linear 0s;
 }

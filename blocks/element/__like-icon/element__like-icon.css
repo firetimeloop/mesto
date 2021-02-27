@@ -9,9 +9,9 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: opacity 0.5s linear 0s;
 }
 
 .element__like-icon:hover {
-  opacity: .6;
-  transition: opacity 0.5s linear 0s;
+  opacity: .5;
 }
