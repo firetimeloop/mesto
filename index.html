@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__logo"></div>
+      </header>
+      <main class="main-content">
+        <section class="profile">
+          <div class="profile__info">
+            <img class="profile__avatar" src="./images/avatar-image.jpg" alt="Аватарка">
+            <div class="profile__description">
+              <div class="profile__edit-block">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button"></button>
+              </div>
+              <p class="profile__bio">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="profile__add-button" type="button"></button>
+        </section>
+        <section>
+          <ul class="elements">
+            <li class="element">
+              <img class="element__image" src="./images/place-Karachaevsk.jpg" alt="Заброшенный монастырь в Карачаево-черкесии">
+              <div class="element__description-block">
+                <p class="element__name">Карачаево-черкесия</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+            <li class="element">
+              <img class="element__image" src="./images/place-Elbrus.png" alt="Гора Эльбрус вдали">
+              <div class="element__description-block">
+                <p class="element__name">Гора Эльбрус</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+            <li class="element">
+              <img class="element__image" src="./images/place-Dombuy.png" alt="Вид на горы Домбай">
+              <div class="element__description-block">
+                <p class="element__name">Домбай</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+            <li class="element">
+              <img class="element__image" src="./images/place-Bryce-canyon.jpg" alt="Вид на Брайс-каньон">
+              <div class="element__description-block">
+                <p class="element__name">Брайс-каньон</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+            <li class="element">
+              <img class="element__image" src="./images/place-Fanshipan.jpg" alt="Вид на храм в горах Фаншипан">
+              <div class="element__description-block">
+                <p class="element__name">Фаншипан</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+            <li class="element">
+              <img class="element__image" src="./images/place-Golden-gate.jpg" alt="Мост Золотые ворота">
+              <div class="element__description-block">
+                <p class="element__name">Золотые ворота</p>
+                <button class="element__like-icon" type="button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2021 Mesto Russia and more</p>
+      </footer>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <h2 class="popup__header">Редактировать профиль</h2>
+        <form name="edit-profile-form" class="popup__form">
+          <input name="edit-name" type="text" class="popup__input-text-box popup__input-text-box_name">
+          <input name="edit-bio" type="text" class="popup__input-text-box popup__input-text-box_bio">
+          <button class="popup__submit-button" type="submit"></button>
+        </form>
+        <button class="popup__close-button" type="button"></button>
+      </div>
+    </div>
+    <script src="./scripts/script.js">
+    </script>
+  </body>
+</html>
