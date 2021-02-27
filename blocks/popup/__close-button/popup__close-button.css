@@ -9,6 +9,9 @@
   position: absolute;
   top: -48px;
   right: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 320px) {

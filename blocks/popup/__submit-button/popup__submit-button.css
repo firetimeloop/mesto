@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 2px;
+  width: 100%;
+  background-color: black;
+  border: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 320px) {
