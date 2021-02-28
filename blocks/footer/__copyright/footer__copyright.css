@@ -9,19 +9,14 @@
 }
 
 @media (min-width: 320px) {
-  .footer {
-    width: calc(100vw*0.623 + 82.67px);
-    margin-top: calc(100vw*0.02 + 41.67px);
-    margin-bottom: calc(100vw*0.025 + 28px);
+  .footer__copyright {
     font-size: calc(100vw*0.004 + 12.67px);
     line-height: calc(100vw*0.005 + 15.33px);
   }
 }
 
 @media (min-width: 1280px) {
-  .footer {
-    margin-top: 67px;
-    margin-bottom: 60px;
+  .footer__copyright {
     font-size: 18px;
     line-height: 22px;
   }
