@@ -1,3 +1,34 @@
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
+const cardTemplate = document.querySelector('#element').content;
+const cardsList = document.querySelector('.elements');
+
+
 let profileName = document.querySelector('.profile__name');
 let profileBio = document.querySelector('.profile__bio');
 
@@ -13,6 +44,15 @@ let editButton = document.querySelector('.profile__edit-button');
 
 let closeButton = document.querySelector('.popup__close-button');
 
+
+function addCardToList(elementData) {
+  const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
+  const cardImage = cardElement.querySelector('.element__image');
+  cardImage.src = elementData.link;
+  cardImage.alt = elementData.name;
+  cardElement.querySelector('.element__name').textContent = elementData.name;
+  cardsList.prepend(cardElement);
+}
 
 function openPopup() {
   nameInput.value = profileName.textContent;
@@ -30,6 +70,9 @@ function handleProfileSubmit (evt) {
   profileBio.textContent = jobInput.value;
   closePopup();
 }
+
+
+initialCards.forEach(addCardToList);
 
 
 editButton.addEventListener('click', openPopup);
