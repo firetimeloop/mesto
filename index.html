@@ -77,12 +77,24 @@
       </footer>
     </div>
 
-    <div class="popup">
+    <div class="popup popup_type_changing-profile">
       <div class="popup__container">
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form name="edit-profile-form" class="popup__form">
+        <form name="edit-profile-form" class="popup__form popup__form_type_edit">
           <input name="edit-name" type="text" class="popup__input-text-box popup__input-text-box_type_name">
           <input name="edit-bio" type="text" class="popup__input-text-box popup__input-text-box_type_bio">
+          <button class="popup__submit-button" type="submit" aria-label="Отправить"></button>
+        </form>
+        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+      </div>
+    </div>
+
+    <div class="popup popup_type_adding-card">
+      <div class="popup__container">
+        <h2 class="popup__header">Новое место</h2>
+        <form name="edit-profile-form" class="popup__form popup__form_type_add">
+          <input name="edit-name" type="text" placeholder="Название" class="popup__input-text-box popup__input-text-box_type_card-name">
+          <input name="edit-bio" type="text" placeholder="Ссылка на картинку" class="popup__input-text-box popup__input-text-box_type_src">
           <button class="popup__submit-button" type="submit" aria-label="Отправить"></button>
         </form>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
