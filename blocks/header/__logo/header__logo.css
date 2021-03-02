@@ -6,7 +6,7 @@
   margin-left: 27px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../../../images/logo.svg");
+  background-image: url('../../../images/logo.svg');
   background-position: center;
   z-index: 1;
 }
