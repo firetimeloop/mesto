@@ -75,7 +75,7 @@ function addCardToList(elementData) {
     removeParent(cardTrashButton);
   });
   cardImage.addEventListener('click', function () {
-    openPopup(popupImage, { name: elementData.name, src: elementData.link })
+    openPopup(popupImage, { name: elementData.name, src: elementData.link });
   });
   cardsList.prepend(cardElement);
 }
@@ -154,6 +154,6 @@ trashButtons.forEach(function(button) {
 
 imageButtons.forEach(function(button) {
   button.addEventListener('click', function () {
-    openPopup(popupImage, { name: button.parentElement.querySelector('.element__name').textContent, src: button.src })
+    openPopup(popupImage, { name: button.parentElement.querySelector('.element__name').textContent, src: button.src });
   });
 });
