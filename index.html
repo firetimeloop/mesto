@@ -84,7 +84,7 @@
     </div>
 
     <div class="popup popup_type_changing-profile">
-      <div class="popup__container">
+      <div class="popup__container popup__container_type_form">
         <h2 class="popup__header">Редактировать профиль</h2>
         <form name="edit-profile-form" class="popup__form popup__form_type_edit">
           <input name="edit-name" type="text" class="popup__input-text-box popup__input-text-box_type_name">
@@ -96,13 +96,31 @@
     </div>
 
     <div class="popup popup_type_adding-card">
-      <div class="popup__container">
+      <div class="popup__container popup__container_type_form">
         <h2 class="popup__header">Новое место</h2>
         <form name="edit-profile-form" class="popup__form popup__form_type_add">
           <input name="edit-name" type="text" placeholder="Название" class="popup__input-text-box popup__input-text-box_type_card-name">
           <input name="edit-bio" type="text" placeholder="Ссылка на картинку" class="popup__input-text-box popup__input-text-box_type_src">
           <button class="popup__submit-button" type="submit" aria-label="Отправить"></button>
         </form>
+        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+      </div>
+    </div>
+
+    <template id="popup-image">
+      <div class="popup">
+        <div class="popup__container">
+          <img class="popup__image" src="./images/place-Fanshipan.jpg" alt="Вид на храм в горах Фаншипан">
+          <h2 class="popup__image-description">Новое место</h2>
+          <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </template>
+
+    <div class="popup popup_type_image">
+      <div class="popup__container popup__container_type_image">
+        <img class="popup__image" src="./images/place-Fanshipan.jpg" alt="Вид на храм в горах Фаншипан">
+        <h2 class="popup__image-description">Новое место</h2>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
       </div>
     </div>
