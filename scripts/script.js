@@ -38,6 +38,7 @@ let nameInput = formEditElement.querySelector('.popup__input-text-box_type_name'
 let jobInput = formEditElement.querySelector('.popup__input-text-box_type_bio');
 
 let likeButtons = document.querySelectorAll('.element__like-icon');
+let trashButtons = document.querySelectorAll('.element__trash-icon');
 
 let popupChangeProfile = document.querySelector('.popup_type_changing-profile');
 let editButton = document.querySelector('.profile__edit-button');
@@ -65,6 +66,10 @@ function addCardToList(elementData) {
   cardLikeButton.addEventListener('click', function () {
     cardLikeButton.classList.toggle('element__like-icon_pushed');
   });
+  const cardTrashButton = cardElement.querySelector('.element__trash-icon');
+  cardTrashButton.addEventListener('click', function () {
+    removeParent(cardTrashButton);
+  });
   cardsList.prepend(cardElement);
 }
 
@@ -78,6 +83,10 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+}
+
+function removeParent(element) {
+  element.parentElement.remove();
 }
 
 function handleProfileSubmit (evt) {
@@ -116,5 +125,11 @@ formAddElement.addEventListener('submit', handleAddCardSubmit);
 likeButtons.forEach(function(button) {
   button.addEventListener('click', function () {
     button.classList.toggle('element__like-icon_pushed');
+  });
+});
+
+trashButtons.forEach(function(button) {
+  button.addEventListener('click', function () {
+    removeParent(button);
   });
 });
