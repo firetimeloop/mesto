@@ -6,11 +6,14 @@
   height: 100vh;
   z-index: 2;
   color: #000;
-  display: none;
+  display: flex;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
   font-family: 'Inter', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
