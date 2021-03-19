@@ -38,9 +38,11 @@
     <div class="popup popup_type_changing-profile">
       <div class="popup__container popup__container_type_form">
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form name="edit-profile-form" class="popup__form popup__form_type_edit">
-          <input name="edit-name" type="text" class="popup__input-text-box popup__input-text-box_type_name">
-          <input name="edit-bio" type="text" class="popup__input-text-box popup__input-text-box_type_bio">
+        <form name="edit-profile-form" class="popup__form popup__form_type_edit" novalidate>
+          <input id="name-input" name="edit-name" type="text" class="popup__input-text-box popup__input-text-box_type_name" minlength="2" maxlength="40" required>
+          <span class="name-input-error popup__error"></span>
+          <input id="bio-input" name="edit-bio" type="text" class="popup__input-text-box popup__input-text-box_type_bio" minlength="2" maxlength="200" required>
+          <span class="bio-input-error popup__error"></span>
           <button class="popup__submit-button" type="submit" aria-label="Отправить"></button>
         </form>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
@@ -50,9 +52,11 @@
     <div class="popup popup_type_adding-card">
       <div class="popup__container popup__container_type_form">
         <h2 class="popup__header">Новое место</h2>
-        <form name="edit-profile-form" class="popup__form popup__form_type_add">
-          <input name="edit-name" type="text" placeholder="Название" class="popup__input-text-box popup__input-text-box_type_card-name">
-          <input name="edit-bio" type="text" placeholder="Ссылка на картинку" class="popup__input-text-box popup__input-text-box_type_src">
+        <form name="edit-profile-form" class="popup__form popup__form_type_add" novalidate>
+          <input id="place-name-input" name="edit-name" type="text" placeholder="Название" class="popup__input-text-box popup__input-text-box_type_card-name" minlength="2" maxlength="30" required>
+          <span class="place-name-input-error popup__error"></span>
+          <input id="url-input" name="edit-bio" placeholder="Ссылка на картинку" class="popup__input-text-box popup__input-text-box_type_src" type="email" required>
+          <span class="url-input-error popup__error"></span>
           <button class="popup__submit-button" type="submit" aria-label="Отправить"></button>
         </form>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
@@ -79,6 +83,8 @@
     </template>
 
     <script src="./scripts/script.js">
+    </script>
+    <script src="./scripts/validate.js">
     </script>
   </body>
 </html>
