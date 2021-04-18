@@ -1,11 +1,9 @@
-import { imageElement, imageDescriptionElemnt, openPopup, popupImage } from './index.js';
-
-
-export class Card {
-  constructor(item, templateSelector) {
+export default class Card {
+  constructor(item, templateSelector, handleCardClick) {
     this._title = item.name;
     this._image = item.link;
     this._templateSelector = templateSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate(){
@@ -34,7 +32,7 @@ export class Card {
     });
     this._element.addEventListener('click', (evt) => {
       if (evt.target.classList.contains('element__image')) {
-        this._handleOpenImagePopup({
+        this._handleCardClick({
           name: this._title,
           src: this._image
         });
@@ -49,13 +47,6 @@ export class Card {
 
   _handleTrashClick() {
     this._element.remove();
-  }
-
-  _handleOpenImagePopup(objData){
-    imageElement.src = objData.src;
-    imageElement.alt = objData.name;
-    imageDescriptionElemnt.textContent = objData.name;
-    openPopup(popupImage);
   }
 
   _handleToggleLikeButton(obj){
