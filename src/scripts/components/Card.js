@@ -18,38 +18,31 @@ export default class Card {
   generateCard() {
     this._element = this._getTemplate();
     this._setEventListeners();
-    this._element.querySelector('.element__image').src = this._image;
-    this._element.querySelector('.element__image').alt = this._title;
+    const elementImage = this._element.querySelector('.element__image');
+    elementImage.src = this._image;
+    elementImage.alt = this._title;
     this._element.querySelector('.element__name').textContent = this._title;
     return this._element;
   }
 
   _setEventListeners() {
-    this._element.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('element__trash-icon')) {
-        this._handleTrashClick();
-      }
+    this._element.querySelector('.element__trash-icon').addEventListener('click', this._handleTrashClick.bind(this));
+    this._element.querySelector('.element__image').addEventListener('click', () => {
+      this._handleCardClick({
+        name: this._title,
+        src: this._image
+      });
     });
-    this._element.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('element__image')) {
-        this._handleCardClick({
-          name: this._title,
-          src: this._image
-        });
-      }
-    });
-    this._element.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('element__like-icon')) {
-        this._handleToggleLikeButton(evt.target.classList);
-      }
-    });
+    const elementLikeButton = this._element.querySelector('.element__like-icon');
+    elementLikeButton.addEventListener('click', this._handleToggleLikeButton);
   }
 
   _handleTrashClick() {
     this._element.remove();
+    delete this._element;
   }
 
-  _handleToggleLikeButton(obj){
-    obj.toggle('element__like-icon_pushed');
+  _handleToggleLikeButton(){
+    this.classList.toggle('element__like-icon_pushed');
   }
 }

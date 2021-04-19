@@ -8,6 +8,5 @@ export default class PopupWithImage extends Popup {
     imageElement.alt = objData.name;
     imageDescriptionElemnt.textContent = objData.name;
     super.open();
-    this._setEventListeners();
   }
 }
