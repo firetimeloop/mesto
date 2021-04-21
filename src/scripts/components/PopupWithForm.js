@@ -8,13 +8,6 @@ export default class PopupWithForm extends Popup {
     this._handleFormSubmit = this._handleFormSubmit.bind(this);
   }
 
-  open(){
-    super.open();
-    const submitButton = this._element.querySelector('.popup__submit-button');
-    submitButton.disabled = true;
-    submitButton.classList.add('.popup__submit-button_disabled');
-  }
-
   getElement(){
     return this._element;
   }
@@ -34,8 +27,8 @@ export default class PopupWithForm extends Popup {
 
   }
 
-  _setEventListeners() {
-    super._setEventListeners();
+  setEventListeners() {
+    super.setEventListeners();
     this._element.addEventListener('submit', this._handleFormSubmit);
   }
 

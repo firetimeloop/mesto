@@ -9,7 +9,9 @@ import UserInfo from './components/UserInfo.js';
 import { initialCards } from './utils/constants.js';
 
 function createCard(data, template, clickHandler){
-  return new Card(data, template, clickHandler);
+  const card = new Card(data, template, clickHandler);
+  const cardElement = card.generateCard();
+  return cardElement;
 }
 
 const editButton = document.querySelector('.profile__edit-button');
@@ -20,12 +22,12 @@ const cardTemplateName = 'element';
 
 const userData = new UserInfo('.profile__name', '.profile__bio');
 const imagePopup = new PopupWithImage('.popup_type_image');
-imagePopup._setEventListeners();
+imagePopup.setEventListeners();
 const popupChangeProfile = new PopupWithForm('.popup_type_changing-profile', (inputValues) => {
   userData.setUserInfo(inputValues['edit-name'], inputValues['edit-bio']);
   popupChangeProfile.close();
 });
-popupChangeProfile._setEventListeners();
+popupChangeProfile.setEventListeners();
 const popupAddCard = new PopupWithForm('.popup_type_adding-card', (inputValues) => {
   const dataObj = {
     name: inputValues['edit-name'],
@@ -34,11 +36,10 @@ const popupAddCard = new PopupWithForm('.popup_type_adding-card', (inputValues) 
   const card = createCard(dataObj, cardTemplateName, () => {
     imagePopup.open(dataObj);
   });
-  const cardElement = card.generateCard();
-  cardList.addItem(cardElement);
+  cardList.addItem(card);
   popupAddCard.close();
 });
-popupAddCard._setEventListeners();
+popupAddCard.setEventListeners();
 
 
 const cardList = new Section({
@@ -47,8 +48,7 @@ const cardList = new Section({
     const card = createCard(item, cardTemplateName, () => {
       imagePopup.open(item);
     });
-    const cardElement = card.generateCard();
-    cardList.addItem(cardElement);
+    cardList.addItem(card);
   }
 }, '.elements');
 
@@ -63,6 +63,7 @@ editButton.addEventListener('click', () => {
 
 addButton.addEventListener('click', () => {
   popupAddCard.open();
+  formNewCardValidation.toggleButtonState();
 });
 
 
