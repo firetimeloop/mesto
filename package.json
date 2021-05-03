@@ -34,6 +34,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "core-js": "^3.10.1"
+    "@babel/plugin-syntax-top-level-await": "^7.12.13",
+    "core-js": "^3.11.1",
+    "regenerator-runtime": "^0.13.7"
   }
 }

@@ -2,7 +2,6 @@
   margin-top: 46px;
   margin-bottom: 25px;
   min-height: 36px;
-  background-image: url('../../../images/submit-button.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,6 +11,11 @@
   border: 0;
   cursor: pointer;
   transition: opacity 0.5s linear 0s;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #fff;
 }
 
 @media (min-width: 320px) {
