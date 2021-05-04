@@ -18,18 +18,15 @@ export default class Api {
       })
       .then((res) => {
         return res;
-      })
-      .catch((err) => {
-        console.log(err);
       });
   }
 
-  async getUserInfo() {
-    return await this._genericMethod('users/me', 'GET');
+  getUserInfo() {
+    return this._genericMethod('users/me', 'GET');
   }
 
-  async getInitialCards() {
-    return await this._genericMethod('cards', 'GET');
+  getInitialCards() {
+    return this._genericMethod('cards', 'GET');
   }
 
   editUserInfo(name, about){
@@ -66,6 +63,4 @@ export default class Api {
     });
     return this._genericMethod('users/me/avatar', 'PATCH', body);
   }
-
-  // другие методы работы с API
 }

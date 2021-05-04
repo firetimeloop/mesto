@@ -27,10 +27,10 @@ export default class Card {
     this._element = this._getTemplate();
     this._setEventListeners();
     const elementImage = this._element.querySelector('.element__image');
-    const elementLikeNumber = this._element.querySelector('.element__like-number');
+    this._elementLikeNumber = this._element.querySelector('.element__like-number');
     elementImage.src = this._image;
     elementImage.alt = this._title;
-    elementLikeNumber.textContent = this._likeNumber;
+    this._elementLikeNumber.textContent = this._likeNumber;
     this._element.id = this._imageId;
     this._element.querySelector('.element__name').textContent = this._title;
     if (this._authorId !== this._currentUserId) {
@@ -40,6 +40,14 @@ export default class Card {
       this._element.querySelector('.element__like-icon').classList.add('element__like-icon_pushed');
     }
     return this._element;
+  }
+
+  changeLikesNumber(likesNumber){
+    this._elementLikeNumber.textContent = likesNumber;
+  }
+
+  removeCard(){
+    this._element.remove();
   }
 
   _setEventListeners() {
@@ -73,6 +81,9 @@ export default class Card {
     else{
       this._handleLikeClick();
     }
+  }
+
+  pushLikeButton(){
     this._elementLikeButton.classList.toggle('element__like-icon_pushed');
   }
 }
